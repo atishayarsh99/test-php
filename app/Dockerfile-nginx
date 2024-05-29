@@ -1,0 +1,7 @@
+FROM nginx:1.23.2-alpine
+
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY nginx/.htpasswd /etc/nginx/conf.d/.htpasswd
+
+COPY code /code
